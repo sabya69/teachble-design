@@ -8,66 +8,142 @@
     <!-- Correct CSS path -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-container">
+<script>
+function openSidebar() {
+    document.getElementById("sidebar").style.width = "270px";
+    document.getElementById("overlay").style.display = "block";
+}
 
-            <div class="logo">Teachable</div>
+function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
 
-            <nav class="nav-links">
-                <a href="#">About</a>
-                <a href="#">FAQ</a>
-            </nav>
+<!-- ================= HEADER ================= -->
+<header class="header">
 
-            <button class="header-btn">Get Started</button>
+    <!-- LEFT SIDE -->
+    <div class="header-left">
+        <button class="menu-btn" onclick="openSidebar()">☰</button>
+        <div class="logo">Teachable Machine</div>
+    </div>
 
-        </div>
-    </header>
+    <!-- RIGHT SIDE LINKS -->
+    <nav class="nav-links">
+        <a href="#">About</a>
+        <a href="#">FAQ</a>
+    </nav>
 
-    <section class="container">
+    <!-- BUTTON -->
+    <button class="header-btn">Get Started</button>
+
+</header>
+
+<!-- SIDEBAR + OVERLAY -->
+<div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <span class="close-btn" onclick="closeSidebar()">×</span>
+        <span class="sidebar-title">Teachable Machine</span>
+    </div>
+
+    <div class="sidebar-content">
+
+        <a href="#">➕ New Project</a>
+        <a href="#">📁 Open project from Drive</a>
+        <a href="#" class="disabled">💾 Save project to Drive</a>
+        <a href="#" class="disabled">👁 View project in Drive</a>
+        <a href="#" class="disabled">📄 Make a copy in Drive</a>
+        <a href="#" class="disabled">🚪 Sign out of Drive</a>
+
+        <hr>
+
+        <a href="#">📂 Open project from file</a>
+        <a href="#" class="disabled">⬇ Download project as file</a>
+
+        <hr>
+
+        <a href="#">🏠 About Teachable Machine</a>
+        <a href="#">❓ FAQ</a>
+
+        <hr>
+
+        <a href="#">1️⃣ Gather samples</a>
+        <a href="#">2️⃣ Train your model</a>
+        <a href="#">3️⃣ Export your model</a>
+
+        <hr>
+
+        <a href="#">💬 Send feedback</a>
+    </div>
+</div>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+<section class="container">
+
+    <!-- LEFT CONTENT -->
+    <div class="left-content">
         
-        <!-- LEFT CONTENT -->
-        <div class="left-content">
-            <h1 class="title">Teachable Machine</h1>
+        <h1 class="title">Teachable Machine</h1>
 
-            <p class="subtitle">
-                Train a computer to recognize your own images, sounds, & poses.
-            </p>
+        <p class="subtitle">
+            Train a computer to recognize your own images, sounds, & poses.
+        </p>
 
-            <p class="description">
-                A fast, easy way to create machine learning models for your sites, apps, 
-                and more – no expertise or coding required.
-            </p>
+        <p class="description">
+            A fast, easy way to create machine learning models for your sites, apps,
+            and more – no expertise or coding required.
+        </p>
 
-            <button class="btn-start">Get Started</button>
+        <button class="btn-start">Get Started</button>
 
-            <!-- Logo Row -->
-            <div class="logo-row">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" alt="">
-                <img src="../assets/images/nodejs.png" alt="">
-                <img src="https://raw.githubusercontent.com/arduino/Arduino/master/build/shared/logo/arduino-identity-inverse.svg" alt="">
-            </div>
+        <!-- LOGO ROW -->
+        <div class="logo-row">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" alt="TensorFlow">
+            <img src="../assets/images/nodejs.png" alt="NodeJS">
+            <img src="../assets/images/ardino.png" alt="Arduino">
         </div>
+    </div>
 
-        <!-- RIGHT CONTENT -->
-        <div class="right-content">
-            <div class="preview-box">
-
-                <!-- Correct VIDEO path -->
-                <video
-                    src="../assets/videos/prediction.mp4"
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                ></video>
-
-            </div>
+    <!-- RIGHT CONTENT -->
+    <div class="right-content">
+        <div class="preview-box">
+            <video 
+                src="../assets/videos/prediction.mp4"
+                autoplay loop muted playsinline>
+            </video>
         </div>
+    </div>
 
-    </section>
+</section>
+
+<!-- ================== WHAT IS TEACHABLE MACHINE ================== -->
+<section class="main-content">
+
+    <h1 class="section-title">What is Teachable Machine?</h1>
+
+    <div class="video-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/T2qQGqZxkD0"
+            title="Teachable Machine 2.0: Making AI easier for everyone"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p class="section-description">
+        Teachable Machine is a web-based tool that makes it easy for anyone to create machine learning models without any coding or prior experience.
+        It allows users to train models using their own data, such as images, sounds, and poses, through a simple and intuitive interface.
+    </p>
+
+</section>
 
 </body>
 </html>

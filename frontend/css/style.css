@@ -1,3 +1,69 @@
+/* HEADER */
+.header {
+    width: 100%;
+    padding: 15px 40px;
+    border-bottom: 1px solid #e5e5e5;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1d4ed8;
+}
+
+/* RIGHT SIDE: ABOUT + FAQ + BUTTON */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #333;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #1d4ed8;
+}
+
+/* Button */
+.header-btn {
+    background: #1d4ed8;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.header-btn:hover {
+    background: #143ea6;
+}
+
 /* Basic Reset */
 * {
     margin: 0;

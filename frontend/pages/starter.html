@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Teachable — Images A vs B</title>
+
+  <!-- TensorFlow.js and MobileNet model -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0/dist/mobilenet.min.js"></script>
+
+  <link rel="stylesheet" href="../css/starter.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Sabyasachi Photo Model</div>
+  </header>
+
+  <main class="page">
+    <section class="capture-area">
+      <div class="left-column">
+        <div class="video-wrap">
+          <video id="webcam" autoplay playsinline></video>
+          <div class="video-controls">
+            <button id="captureA" class="btn a">Capture → Class A</button>
+            <button id="captureB" class="btn b">Capture → Class B</button>
+            <select id="cameraSelect" class="camera-select"></select>
+          </div>
+        </div>
+
+        <div class="train-controls">
+          <button id="trainBtn" class="btn primary">🚀 Train Model</button>
+          <button id="startPredictBtn" class="btn" disabled>🔍 Start Predicting</button>
+          <button id="stopPredictBtn" class="btn" disabled>⏹ Stop</button>
+          <div id="status" class="status">Status: Idle</div>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="cards-row">
+          <div class="tool-card">
+            <div class="img-holder">
+              <img id="thumbA" src="" alt="" />
+            </div>
+            <h3>Class A</h3>
+            <div id="galleryA" class="gallery"></div>
+          </div>
+
+          <div class="tool-card">
+            <div class="img-holder">
+              <img id="thumbB" src="" alt="" />
+            </div>
+            <h3>Class B</h3>
+            <div id="galleryB" class="gallery"></div>
+          </div>
+        </div>
+
+        <div class="preview-card">
+          <h4>Live Prediction</h4>
+          <div class="preview-video-mini">
+            <canvas id="previewCanvas" width="224" height="224"></canvas>
+          </div>
+
+          <div id="bars" class="bars">
+            <div class="bar-row">
+              <div class="bar-label a-label">Class A</div>
+              <div class="bar-track"><div id="barA" class="bar-fill a-fill"></div></div>
+              <div id="pctA" class="bar-pct">0%</div>
+            </div>
+
+            <div class="bar-row">
+              <div class="bar-label b-label">Class B</div>
+              <div class="bar-track"><div id="barB" class="bar-fill b-fill"></div></div>
+              <div id="pctB" class="bar-pct">0%</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="notes">
+      <p><strong>Notes:</strong> Capture multiple images for each class (20–50 recommended). Training uses MobileNet features + a small dense classifier inside the browser.</p>
+    </section>
+  </main>
+
+  <script src="../../app.js"></script>
+
+</body>
+</html>

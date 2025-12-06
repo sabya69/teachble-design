@@ -290,6 +290,9 @@ body {
     line-height: 1.5;
     text-align: center;
 }
+.section-title {
+    text-align: center;
+}
 
 /*===================content===================*/
 .workflow-container {
@@ -352,6 +355,80 @@ body {
   object-fit: cover;   /* Makes image fill the box nicely */
   border-radius: 8px;
 }
+/* ==========what can i use to teach it================= */
+.teach-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 120px;   /* pushes it down */
+    margin-bottom: 80px; /* gives space below */
+}
+
+.section-title {
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.section-description {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 850px;
+    margin: 25px auto 0;  /* auto = center horizontally */
+    line-height: 1.5;
+}
+/*===== what can i use to teach it end================= */
+.tool-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.tool-card {
+    width: 320px;
+    text-align: center;
+}
+
+.tool-card img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.tool-card img:hover {
+    transform: translateY(-6px);
+}
+
+.tool-card h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.tool-card p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #444;
+}
+/* Example CSS */
+.btn-start {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-start:hover {
+  background-color: #0056b3;
+}
+
 
 
 /* ================== RESPONSIVE ================== */
